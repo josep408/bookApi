@@ -1,0 +1,30 @@
+<%- include ('templates/header'); -%>
+
+<div class='container'>
+    <div class='jumbotron'>
+        <h1> SEARCH RESULTS </h1>
+        <button class='btn btn-info' onclick='location.href="/";'>Search Again</button>
+    </div>
+    
+    
+
+    <div id='info'>
+        <% data.Search.forEach(function(movie){%>
+	      
+	            <img class='cover' src=<%=book.Cover%> />
+	            <div>
+                    <h5><%=book.Title%></h5>
+                    <p><%=book.Author%></p>
+                    <p><%=book.Publish_date%></p>
+                    <p><%=book.Publishers%></p>
+                    <p><%=book.ISBN%></p>
+                    <p><%=book.Year%></p>
+            
+	
+                </div>
+                
+        <% }); %>
+    <ul>
+</div>
+
+<%- include ('templates/footer'); -%>
